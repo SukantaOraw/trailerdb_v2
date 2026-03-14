@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@heroui/react";
+import NavBar from "../components/NavBar";
 
 export default function MainLayout({
   children,
@@ -9,24 +10,16 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-zinc-950 text-white">
-      {/* Simple Navbar */}
-      <div className="flex items-center gap-4 border-b border-zinc-800 p-4">
-        <Button variant="secondary" >
-          <Link href="/home">Home</Link>
-        </Button>
-
-        <Button variant="primary" >
-          <Link href="/home/movies">Movies</Link>
-        </Button>
-
-        <Button variant="danger" >
-          <Link href="/home/series">Series</Link>
-        </Button>
+    <main className="main-screen min-w-screen min-h-screen">
+      <NavBar />
+      <div className="body flex flex-row">
+        <div className="basis-1/7 flex justify-center items-center bg-stone-800">
+          <p>Side-Bar will ne shrinkable</p>
+        </div>
+        <div className="basis-6/7 bg-stone-700">
+          <main className="p-1">{children}</main>
+        </div>
       </div>
-
-      {/* Page Content */}
-      <main className="p-6">{children}</main>
-    </div>
+    </main>
   );
 }

@@ -9,8 +9,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +22,134 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------------- EMBLA ---------------- */
+
+.embla {
+  max-width: 48rem;
+  margin: auto;
+
+  --slide-height: 19rem;
+  --slide-spacing: 0rem;
+  --slide-size: 100%;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide {
+  flex: 0 0 var(--slide-size);
+  padding-left: var(--slide-spacing);
+}
+
+.embla__slide__img {
+  display: block;
+  height: var(--slide-height);
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.8rem;
+}
+
+/* ---------------- CONTROLS ---------------- */
+
+.embla__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* Arrow buttons */
+
+.embla__buttons {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.embla__button {
+  appearance: none;
+
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+
+  border: 1px solid rgba(0, 0, 0, 0.6);
+
+  width: 2.4rem;
+  height: 2.4rem;
+
+  border-radius: 50%;
+  color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.embla__button:hover {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.embla__button--disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.embla__button__svg {
+  width: 40%;
+  height: 40%;
+}
+
+/* ---------------- DOTS ---------------- */
+
+.embla__dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.embla__dot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+
+  border: none;
+  cursor: pointer;
+}
+
+.embla__dot--selected {
+  background: black;
+}
+
+/* ---------------- PARALLAX ---------------- */
+
+.embla__parallax {
+  border-radius: 1.8rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+.embla__parallax__layer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.embla__parallax__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
