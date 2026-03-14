@@ -17,7 +17,7 @@ export default function MainLayout({
           <p>Side-Bar will ne shrinkable</p>
         </div>
         <div className="basis-6/7 bg-stone-700">
-          <main className="p-1">{children}</main>
+          <main className="p-4">{children}</main>
         </div>
       </div>
     </main>

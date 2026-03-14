@@ -11,12 +11,8 @@
   "dependencies": {
     "@heroui/react": "^3.0.0-beta.8",
     "@heroui/styles": "^3.0.0-beta.8",
-    "embla-carousel": "9.0.0-rc01",
-    "embla-carousel-accessibility": "9.0.0-rc01",
-    "embla-carousel-autoplay": "9.0.0-rc01",
-    "embla-carousel-class-names": "9.0.0-rc01",
-    "embla-carousel-react": "9.0.0-rc01",
     "framer-motion": "^12.36.0",
+    "keen-slider": "^6.8.6",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
