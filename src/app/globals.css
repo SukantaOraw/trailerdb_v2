@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "@heroui/styles";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -129,3 +128,53 @@
     @apply font-sans;
   }
 }
+
+/* Target the internal wrappers react-slick adds */
+.slick-list,
+.slick-track,
+.slick-slide>div {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  /* clip any bleed */
+}
+
+/* Ensure no margins on slides themselves */
+.slick-slide {
+  margin: 0 !important;
+  padding: 0 !important;
+  outline: none;
+}
+
+/* Fix fade overlap / flash by better z-index & opacity timing */
+.slick-fade .slick-slide {
+  position: relative !important;
+  /* ensure stacking context */
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out !important;
+  /* match your speed: 800ms */
+}
+
+.slick-fade .slick-active {
+  opacity: 1;
+  z-index: 2 !important;
+  /* active on top */
+}
+
+/* Prevent background bleed during fade (common white line cause) */
+.slick-slide img,
+.slick-slide .relative {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+/* If the gap is at edges, force no transform artifacts */
+.slick-track {
+  transform: translate3d(0, 0, 0) !important;
+  /* hardware accelerate + no sub-pixel issues */
+}
+

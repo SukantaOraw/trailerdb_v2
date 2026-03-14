@@ -1,5 +1,4 @@
 "use client";
-import { Tabs } from "@heroui/react";
 
 export default function () {
   return (

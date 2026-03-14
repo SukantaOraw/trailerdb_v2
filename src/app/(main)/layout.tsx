@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { Button } from "@heroui/react";
-import NavBar from "../components/NavBar";
+import NavBar from "../my_components/NavBar";
 
 export default function MainLayout({
   children,

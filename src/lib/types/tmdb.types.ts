@@ -12,7 +12,9 @@ export interface TMDBMovie {
   release_date?: string;
   first_air_date?: string;
 
-  genre_ids: number[]; // ✅ ADD THIS
+  genre_ids: number[];
+  
+  media_type: "movie" | "tv" | "person";
 }
 
 export type TMDBResponse = {
