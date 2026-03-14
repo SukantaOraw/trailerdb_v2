@@ -78,7 +78,7 @@ export const NextButton = (props: PropType) => {
 
   return (
     <button
-      className={" embla__button embla__button--next".concat(
+      className={"embla__button embla__button--next".concat(
         disabled ? " embla__button--disabled" : "",
       )}
       type="button"
