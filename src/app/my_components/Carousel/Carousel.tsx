@@ -20,7 +20,7 @@ function NextArrow({ onClick }: any) {
   return (
     <button
       onClick={onClick}
-      className="absolute right-4 top-1/2 -translate-y-1/2 z-30 
+      className="absolute right-4 top-1/2 -translate-y-1/2 z-10 
       transition-all duration-300 ease-in-out bg-black/30
        hover:bg-black/50 text-white/50 hover:text-white/100 p-2 rounded-full"
     >
@@ -33,7 +33,7 @@ function PrevArrow({ onClick }: any) {
   return (
     <button
       onClick={onClick}
-      className="absolute left-4 top-1/2 -translate-y-1/2 z-30 
+      className="absolute left-4 top-1/2 -translate-y-1/2 z-10 
       transition-all duration-300 ease-in-out bg-black/30
        hover:bg-black/50 text-white/50 hover:text-white/100 p-2 rounded-full"
     >
@@ -96,7 +96,7 @@ export default function Carousel({ carouselCards = [] }: CarouselProps) {
               <div className="absolute rounded-xl inset-0 bg-gradient-to-t from-black to-transparent z-10" />
 
               {/* Content */}
-              <div className="absolute inset-0 z-20 flex items-end justify-between p-4 gap-5">
+              <div className="absolute inset-0 z-10 flex items-end justify-between p-4 gap-5">
                 {/* LEFT */}
                 <div className="text-left text-white flex flex-col gap-2">
                   <h1 className="text-2xl font-bold md:text-4xl text-orange-600">

@@ -1,6 +1,9 @@
 "use client";
 
+import { SidebarProvider } from "@/components/ui/sidebar";
 import NavBar from "../my_components/NavBar";
+import AppSidebar from "../my_components/SideBar";
+import FloatingTrigger from "../my_components/FloatingTrigger";
 
 export default function MainLayout({
   children,
@@ -8,16 +11,19 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="main-screen min-w-screen min-h-screen">
-      <NavBar />
-      <div className="body flex flex-row">
-        <div className="basis-1/7 flex justify-center items-center bg-stone-800">
-          <p>Side-Bar will ne shrinkable</p>
-        </div>
-        <div className="basis-6/7 bg-stone-700">
-          <main className="p-4">{children}</main>
-        </div>
+    <SidebarProvider defaultOpen={false}>
+      <div className="min-h-screen flex flex-col">
+        <NavBar />
+
+        <AppSidebar />
+
+        <FloatingTrigger />
+
+        {/* main content */}
+        <main className="md:ml-[45px] ml-[0px] p-0 md:p-2 bg-zinc-600 flex-1">
+          {children}
+        </main>
       </div>
-    </main>
+    </SidebarProvider>
   );
 }

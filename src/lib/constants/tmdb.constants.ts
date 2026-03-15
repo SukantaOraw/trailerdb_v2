@@ -1,7 +1,7 @@
 const BASE_URL = "https://api.themoviedb.org/3";
 
 export const TMDB = {
-  trending_all_week: `${BASE_URL}/trending/all/week`,
+  trending_all_day: `${BASE_URL}/trending/all/day`,
   trending_movies_week: `${BASE_URL}/trending/movie/week`,
   movies: `${BASE_URL}/discover/movie`,
   series: `${BASE_URL}/discover/tv`,

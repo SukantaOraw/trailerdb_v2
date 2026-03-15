@@ -22,7 +22,7 @@ async function request(url: string) {
 }
 
 export const tmdbApi = {
-  getTrendingAll: () => request(TMDB.trending_all_week),
+  getTrendingAll: () => request(TMDB.trending_all_day),
   getTrendingMovies: () => request(TMDB.trending_movies_week),
   getMovies: () => request(TMDB.movies),
   getSeries: () => request(TMDB.series),
